@@ -15,12 +15,12 @@ setTimeout(function() {
    }, 1500);
 
 var initProgram = setTimeout(function(){
-    var greeting = "UNIDENTIFIED ORGANIC LIFEFORM DETECTED";
-    var message = "RUNNING CODEPEN RESUME PROTOCAL (CRP) FOR @GOTHBURZ";
+    var greeting = "UNIDENTIFIED USER DETECTED";
+    var message = "RUNNING RESUME PROTOCOL FOR @ANDERSPRENGER";
     var $identityDiv = $("#identity-results");
-    var $name = "NAME: PETRUS REX";
-    var $alias = "KNOWN ALIAS: PETRUSR3X"
-    var $occupation  = "OCCUPATION: FRONT END DEVELOPER | WORDPRESS DEVLOPER | DESIGNER";
+    var $name = "NAME: ANDERSON R. P. SPRENGER";
+    var $occupation  = "OCCUPATION: iOS DEVELOPER | HUMAN COMPUTER INTERACTION AND DATA SCIENCE RESEARCHER";
+    var $awards  = "AWARDS: APPLE WWDC 2022 SWIFT STUDENT CHALLENGE";
     var $frontEnd  = "FRONT END DEVELOPMENT CORE: HTML5 | CSS3 | JAVASCRIPT";
       var $JSFrameworks = "JAVASCRIPT FRAMEWORKS: ANGULARJS";
       var $JSLibs = "JAVASCRIPT LIBRARIES: JQUERY | D3 | C3";
@@ -67,26 +67,13 @@ var initProgram = setTimeout(function(){
                   }else{
                      $("#name").removeClass("cursor");
                      setTimeout(function() {
-                        initAlias(0);
+                        initOccupation(0);
                      }, 1500);      
                   }
             }
             setTimeout(function() {
                initName(0);
             }, 2500);
-         }
-         function initAlias(i){
-               $("#alias").addClass("sign cursor").text($alias.substring(0, i));
-                  if(i < $alias.length){
-                     setTimeout(function(){
-                        initAlias(i + 1);   
-                     }, 35);
-                  }else{
-                     $("#alias").removeClass("cursor");
-                     setTimeout(function() {
-                        initOccupation(0);
-                     }, 1500);
-                  }
          }
          function initOccupation(i){
             $("#occupation").addClass("sign cursor").text($occupation.substring(0, i));
@@ -97,10 +84,23 @@ var initProgram = setTimeout(function(){
                   }else{
                      $("#occupation").removeClass("cursor");
                      setTimeout(function() {
-                        initFrontEnd(0);
+                        initAwards(0);
                      }, 1500);
                   }
          }
+         function initAwards(i){
+            $("#awards").addClass("sign cursor").text($awards.substring(0, i));
+               if(i < $awards.length){
+                  setTimeout(function(){
+                     initAwards(i + 1);   
+                  }, 35);
+               }else{
+                  $("#awards").removeClass("cursor");
+                  setTimeout(function() {
+                     initFrontEnd(0);
+                  }, 1500);
+               }
+      }
          function initFrontEnd(i){
             $('#front-end-span').addClass('fa fa-wrench');
             $('#front-end').addClass("cursor").text($frontEnd.substring(0, i));
