@@ -7,7 +7,7 @@ body{
 
 h1{
    font-family: 'Share Tech', sans-serif; /* $shareTech substituído */
-   animation: pulse .9s infinite;
+   /* animation: pulse .9s infinite; */
    color: #00ebd4; /* $blue substituído */
 }
 
@@ -17,13 +17,13 @@ h1{
    font-weight: 900;
    font-size: 24px;
    color: #00ebd4; /* $blue substituído */
-   animation: pulse .9s infinite;
+   /* animation: pulse .9s infinite; */
 }
 
 i{
    font-size: 24px;
    color: #00ebd4; /* $blue substituído */
-   animation: pulse .9s infinite;  
+   /* animation: pulse .9s infinite;   */
 }
 
 .block{
@@ -76,7 +76,7 @@ i{
 
 img{
    margin: 50px 0;
-   animation: pulse .9s infinite;
+   /* animation: pulse .9s infinite; */
 }
 
 #loadingMessage2{
