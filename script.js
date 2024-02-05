@@ -15,24 +15,22 @@ setTimeout(function() {
    }, 1500);
 
 var initProgram = setTimeout(function(){
-    var greeting = "UNIDENTIFIED USER DETECTED";
+    var greeting = "ABOUT ANDERSON SPRENGER";
     var message = "RUNNING RESUME PROTOCOL FOR @ANDERSPRENGER";
     var $identityDiv = $("#identity-results");
-    var $name = "NAME: ANDERSON R. P. SPRENGER";
-    var $occupation  = "OCCUPATION: iOS DEVELOPER | HUMAN COMPUTER INTERACTION AND DATA SCIENCE RESEARCHER";
+    var $name = "OCCUPATION: iOS DEVELOPER | HUMAN COMPUTER INTERACTION AND DATA SCIENCE RESEARCHER";
     var $awards  = "AWARDS: APPLE WWDC 2022 SWIFT STUDENT CHALLENGE";
-    var $frontEnd  = "FRONT END DEVELOPMENT CORE: HTML5 | CSS3 | JAVASCRIPT";
-      var $JSFrameworks = "JAVASCRIPT FRAMEWORKS: ANGULARJS";
-      var $JSLibs = "JAVASCRIPT LIBRARIES: JQUERY | D3 | C3";
-      var $CSSFrameworks = "CSS FRAMEWORKS: BOOTSTRAP | SEMANTIC UI";
-      var $CSSPre = "CSS PREPROCESSORS: SASS | LESS | STYLUS";
-      var $frontEndAnimation = "FRONT END ANIMATION: CANVAS | HTML5 | SVG";
-    var $cmsDevelopment = "WORDPRESS DEVELOPMENT: WORDPRESS";
-      var $wordpress = "WORDPRESS: CUSTOM THEMING | PLUGINS";
-    var $design = "DESIGN CORE: ADOBE SUITE";
-      var $webDesign = "WEB DESIGN: INDESIGN CC | MUSE CC";
-      var $branding = "ILLUSTRATIONS & BRANDING: ILLUSTRATOR CC | PHOTOSHOP CC";
-      var $designAnimation = "ANIMATION DESIGN: AFTER EFFECTS CC | FLASH CC";
+    var $appleDev  = "iOS DEVELOPMENT";
+      var $appleDevCore = "iOS CORE: SWIFT | UIKIT | SWIFT UI | VIEW CODE | OBJECTIVE-C";
+      var $appleDevSkills = "SKILLS: ARKIT | SCENEKIT | SPRITEKIT | CORE ML | XCTESTS | CORE DATA";
+      var $appleDevMethodologies = "METHODOLOGIES: AGILE | SCRUM | MVVM | CI/CD | UNIT TESTING";
+      var $appleDevPublished = "APPS PUBLISHED: VOYAGE TRAVEL PLANNER | CODEBIRD | SPACE VOID";
+      var $appleDevExperience = "PROFESSIONAL EXPERIENCE: FEBRUARY 2021 ~ DECEMBER 2022 - APPLE DEVELOPER ACADEMY";
+    var $research = "RESEARCH";
+      var $researchFocus = "FOCUS: HUMAN COMPUTER INTERACTION AND DATA SCIENCE AT DAVINT LAB, PUCRS";
+    var $education = "EDUCATION";
+      var $educationBsc = "BSc COMPUTER SCIENCE STUDENT AT PUCRS";
+      var $educationAcademy = "2022 APPLE DEVELOPER ACADEMY ALUMNUS";
       
    function initIdentityResults(i){
        $("#message").addClass("sign cursor").text(message.substring(0, i));
@@ -58,26 +56,9 @@ var initProgram = setTimeout(function(){
                }, 350);  // Dot Speed
             }
             loadingResume();
-            function initName(i){
-               $("#name").addClass("sign cursor").text($name.substring(0, i));
+            function initOccupation(i){
+               $("#occupation").addClass("sign cursor").text($name.substring(0, i));
                   if(i < $name.length){
-                     setTimeout(function(){
-                        initName(i + 1);   
-                     }, 35);
-                  }else{
-                     $("#name").removeClass("cursor");
-                     setTimeout(function() {
-                        initOccupation(0);
-                     }, 1500);      
-                  }
-            }
-            setTimeout(function() {
-               initName(0);
-            }, 2500);
-         }
-         function initOccupation(i){
-            $("#occupation").addClass("sign cursor").text($occupation.substring(0, i));
-                  if(i < $occupation.length){
                      setTimeout(function(){
                         initOccupation(i + 1);   
                      }, 35);
@@ -85,178 +66,182 @@ var initProgram = setTimeout(function(){
                      $("#occupation").removeClass("cursor");
                      setTimeout(function() {
                         initAwards(0);
-                     }, 1500);
+                     }, 1500);      
                   }
+            }
+            setTimeout(function() {
+               initOccupation(0);
+            }, 2500);
          }
          function initAwards(i){
             $("#awards").addClass("sign cursor").text($awards.substring(0, i));
-               if(i < $awards.length){
+                  if(i < $awards.length){
+                     setTimeout(function(){
+                        initAwards(i + 1);   
+                     }, 35);
+                  }else{
+                     $("#awards").removeClass("cursor");
+                     setTimeout(function() {
+                        initAppleDevelopment(0);
+                     }, 1500);
+                  }
+         }
+         function initAppleDevelopment(i){
+            $('#front-end-span').addClass('fa fa-apple');
+            $('#front-end').addClass("cursor").text($appleDev.substring(0, i));
+               if(i < $appleDev.length){
                   setTimeout(function(){
-                     initAwards(i + 1);   
-                  }, 35);
-               }else{
-                  $("#awards").removeClass("cursor");
-                  setTimeout(function() {
-                     initFrontEnd(0);
-                  }, 1500);
-               }
-      }
-         function initFrontEnd(i){
-            $('#front-end-span').addClass('fa fa-wrench');
-            $('#front-end').addClass("cursor").text($frontEnd.substring(0, i));
-               if(i < $frontEnd.length){
-                  setTimeout(function(){
-                     initFrontEnd(i + 1);  
+                     initAppleDevelopment(i + 1);  
                   }, 35);
                }else{
                   $('#front-end').removeClass("cursor");
                      setTimeout(function() {
-                        initJSFrameworks(0);
+                        initAppleDevCore(0);
                      }, 1500);
                }
          }
-         function initJSFrameworks(i){
-            $('#js-frameworks').addClass("sign cursor").text($JSFrameworks.substring(0, i));
-               if(i < $JSFrameworks.length){
+         function initAppleDevCore(i){
+            $('#js-frameworks').addClass("sign cursor").text($appleDevCore.substring(0, i));
+               if(i < $appleDevCore.length){
                   setTimeout(function(){
-                      initJSFrameworks(i + 1);  
+                      initAppleDevCore(i + 1);  
                   }, 35);
                }else{
                   $('#js-frameworks').removeClass("cursor");
                      setTimeout(function() {
-                        initJSLibs(0);
+                        initSkills(0);
                      }, 1500);
                }
          }
-         function initJSLibs(i){
-            $('#js-libs').addClass("sign cursor").text($JSLibs.substring(0, i));
-               if(i < $JSLibs.length){
+         function initSkills(i){
+            $('#js-libs').addClass("sign cursor").text($appleDevSkills.substring(0, i));
+               if(i < $appleDevSkills.length){
                   setTimeout(function(){
-                      initJSLibs(i + 1);  
+                      initSkills(i + 1);  
                   }, 35);
                }else{
                   $('#js-libs').removeClass("cursor");
                      setTimeout(function() {
-                        initCSSFrameworks(0);
+                        initMethodologies(0);
                      }, 1500);
                }
          }
-         function initCSSFrameworks(i){
-            $('#css-frameworks').addClass("sign cursor").text($CSSFrameworks.substring(0, i));
-               if(i < $CSSFrameworks.length){
+         function initMethodologies(i){
+            $('#css-frameworks').addClass("sign cursor").text($appleDevMethodologies.substring(0, i));
+               if(i < $appleDevMethodologies.length){
                   setTimeout(function(){
-                      initCSSFrameworks(i + 1);  
+                      initMethodologies(i + 1);  
                   }, 35);
                }else{
                   $('#css-frameworks').removeClass("cursor");
                   setTimeout(function() {
-                        initCSSPre(0);
+                        initAppPublished(0);
                      }, 1500);
                }
          }
-          function initCSSPre(i){
-            $('#css-pre').addClass("sign cursor").text($CSSPre.substring(0, i));
-               if(i < $CSSPre.length){
+          function initAppPublished(i){
+            $('#css-pre').addClass("sign cursor").text($appleDevPublished.substring(0, i));
+               if(i < $appleDevPublished.length){
                   setTimeout(function(){
-                      initCSSPre(i + 1);  
+                      initAppPublished(i + 1);  
                   }, 35);
                }else{
                   $('#css-pre').removeClass("cursor");
                   setTimeout(function() {
-                        initFrontEndAnimation(0);
+                        initProfessionalExperience(0);
                      }, 1500);
                }
          }
-         function initFrontEndAnimation(i){
-            $('#front-end-animation').addClass("sign cursor").text($frontEndAnimation.substring(0, i));
-               if(i < $frontEndAnimation.length){
+         function initProfessionalExperience(i){
+            $('#front-end-animation').addClass("sign cursor").text($appleDevExperience.substring(0, i));
+               if(i < $appleDevExperience.length){
                   setTimeout(function(){
-                      initFrontEndAnimation(i + 1);  
+                      initProfessionalExperience(i + 1);  
                   }, 35);
                }else{
                   $('#front-end-animation').removeClass("cursor");
                   setTimeout(function() {
-                        initCMSDevelopment(0);
+                        initResearch(0);
                      }, 1500);
                }
          }
-         function initCMSDevelopment(i){
-            $('#cms-span').addClass("fa fa-wordpress")
-            $('#CMS-development').addClass("cursor").text($cmsDevelopment.substring(0, i));
-               if(i < $cmsDevelopment.length){
+         function initResearch(i){
+            $('#cms-span').addClass("fa fa-search")
+            $('#CMS-development').addClass("cursor").text($research.substring(0, i));
+               if(i < $research.length){
                   setTimeout(function(){
-                      initCMSDevelopment(i + 1);  
+                      initResearch(i + 1);  
                   }, 35);
                }else{
                   $('#CMS-development').removeClass("cursor");
                   setTimeout(function() {
-                        initWordpress(0);
+                        initEducationInfo(0);
                      }, 1500);
                }
          }
-         function initWordpress(i){
-            $('#wordpress').addClass("sign cursor").text($wordpress.substring(0, i));
-               if(i < $wordpress.length){
+         function initEducationInfo(i){
+            $('#wordpress').addClass("sign cursor").text($researchFocus.substring(0, i));
+               if(i < $researchFocus.length){
                   setTimeout(function(){
-                      initWordpress(i + 1);  
+                      initEducationInfo(i + 1);  
                   }, 35);
                }else{
                   $('#wordpress').removeClass("cursor");
                   setTimeout(function() {
-                        initDesign(0);
+                        initEducation(0);
                      }, 1500);
                }
          }
-          function initDesign(i){
-            $('#design-span').addClass('fa fa-paint-brush');
-            $('#design').addClass("cursor").text($design.substring(0, i));
-               if(i < $design.length){
+          function initEducation(i){
+            $('#design-span').addClass('fa fa-graduation-cap');
+            $('#design').addClass("cursor").text($education.substring(0, i));
+               if(i < $education.length){
                   setTimeout(function(){
-                      initDesign(i + 1);  
+                      initEducation(i + 1);  
                   }, 35);
                }else{
                   $('#design').removeClass("cursor");
                   setTimeout(function() {
-                        initWebDesign(0);
+                        initUniversity(0);
                      }, 1500);
                }
          }
-         function initWebDesign(i){
-            $('#web-design').addClass("sign cursor").text($webDesign.substring(0, i));
-               if(i < $webDesign.length){
+         function initUniversity(i){
+            $('#web-design').addClass("sign cursor").text($educationBsc.substring(0, i));
+               if(i < $educationBsc.length){
                   setTimeout(function(){
-                      initWebDesign(i + 1);  
+                      initUniversity(i + 1);  
                   }, 35);
                }else{
                   $('#web-design').removeClass("cursor");
                   setTimeout(function() {
-                        initBranding(0);
+                        initAcademy(0);
                      }, 1500);
                }
          }
-         function initBranding(i){
-            $('#branding').addClass("sign cursor").text($branding.substring(0, i));
-               if(i < $branding.length){
+         function initAcademy(i){
+            $('#branding').addClass("sign cursor").text($educationAcademy.substring(0, i));
+               if(i < $educationAcademy.length){
                   setTimeout(function(){
-                      initBranding(i + 1);  
+                      initAcademy(i + 1);  
                   }, 35);
                }else{
-                  $('#branding').removeClass("cursor");
-                  setTimeout(function() {
-                        initDesignAnimation(0);
-                     }, 1500);
+                  // $('#branding').removeClass("cursor");
+                  // setTimeout(function() {
+                  //       initDesignAnimation(0);
+                  //    }, 1500);
                }
          }
-         function initDesignAnimation(i){
-            $('#design-animation').addClass("sign cursor").text($designAnimation.substring(0, i));
-               if(i < $designAnimation.length){
-                  setTimeout(function(){
-                      initDesignAnimation(i + 1);  
-                  }, 35);
-               }else{
-                  //$('#design-animation').removeClass("cursor");
-               }
-         }
+         // function initDesignAnimation(i){
+         //    $('#design-animation').addClass("sign cursor").text($designAnimation.substring(0, i));
+         //       if(i < $designAnimation.length){
+         //          setTimeout(function(){
+         //              initDesignAnimation(i + 1);  
+         //          }, 35);
+         //       }else{
+         //          //$('#design-animation').removeClass("cursor");
+         //       }
+         // }
       }
       
    function initProgramAlpha(i){
