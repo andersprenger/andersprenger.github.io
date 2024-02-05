@@ -1,38 +1,35 @@
-$black: #000;
-$blue: #00ebd4;
-
 @import url(https://fonts.googleapis.com/css?family=Share+Tech);
-$shareTech: "Share Tech";
+/* Removido $shareTech: "Share Tech"; pois será substituído diretamente */
 
 body{
-   background-color: $black;
+   background-color: #000; /* $black substituído */
 }
 
 h1{
-   font-family: $shareTech;
+   font-family: 'Share Tech', sans-serif; /* $shareTech substituído */
    animation: pulse .9s infinite;
-   color: $blue;
+   color: #00ebd4; /* $blue substituído */
 }
 
 #identity-results, #resume, #loading-alpha-div, #loadingH1, #loadingMessage2, #message{
    margin-top: 20px;
-   font-family: $shareTech;
+   font-family: 'Share Tech', sans-serif; /* $shareTech substituído */
    font-weight: 900;
    font-size: 24px;
-   color: $blue;
+   color: #00ebd4; /* $blue substituído */
    animation: pulse .9s infinite;
 }
 
 i{
    font-size: 24px;
-   color: $blue;
+   color: #00ebd4; /* $blue substituído */
    animation: pulse .9s infinite;  
 }
 
 .block{
    width: 50px;
    height: 50px;
-   background-color: $black;
+   background-color: #000; /* $black substituído */
 }
 
 @keyframes pulse {
