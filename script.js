@@ -15,18 +15,18 @@ setTimeout(function() {
    }, 1500);
 
 var initProgram = setTimeout(function(){
-    var greeting = "UNIDENTIFIED USER DETECTED";
+    var greeting = "ABOUT ANDERSON SPRENGER";
     var message = "RUNNING RESUME PROTOCOL FOR @ANDERSPRENGER";
     var $identityDiv = $("#identity-results");
     var $name = "NAME: ANDERSON R. P. SPRENGER";
     var $occupation  = "OCCUPATION: iOS DEVELOPER | HUMAN COMPUTER INTERACTION AND DATA SCIENCE RESEARCHER";
-    var $awards  = "AWARDS: APPLE WWDC 2022 SWIFT STUDENT CHALLENGE";
-    var $frontEnd  = "FRONT END DEVELOPMENT CORE: HTML5 | CSS3 | JAVASCRIPT";
-      var $JSFrameworks = "JAVASCRIPT FRAMEWORKS: ANGULARJS";
-      var $JSLibs = "JAVASCRIPT LIBRARIES: JQUERY | D3 | C3";
-      var $CSSFrameworks = "CSS FRAMEWORKS: BOOTSTRAP | SEMANTIC UI";
-      var $CSSPre = "CSS PREPROCESSORS: SASS | LESS | STYLUS";
-      var $frontEndAnimation = "FRONT END ANIMATION: CANVAS | HTML5 | SVG";
+    var $awards  = "AWARDS: APPLE WWDC 2022 SWIFT STUDENT CHALLENGE WINNER";
+      var $frontEnd  = "EDUCATION: BSc COMPUTER SCIENCE STUDENT AT PUCRS | 2022 APPLE DEVELOPER ACADEMY ALUMNUS";
+      var $JSFrameworks = "RESEARCH: FOCUSING ON HCI AND DATA SCIENCE AT DAVINT LAB, PUCRS";
+      var $JSLibs = "iOS DEVELOPMENT: SWIFT | UIKIT | SWIFT UI | VIEW CODE | OBJECTIVE-C";
+      var $CSSFrameworks = "SKILLS: ARKIT | SCENEKIT | SPRITEKIT | CORE ML | XCTESTS | CORE DATA";
+      var $CSSPre = "METHODOLOGIES: AGILE | SCRUM | MVVM | CI/CD | UNIT TESTING";
+      var $frontEndAnimation = "APPS PUBLISHED: VOYAGE TRAVEL PLANNER | CODEBIRD | SPACE VOID";
     var $cmsDevelopment = "WORDPRESS DEVELOPMENT: WORDPRESS";
       var $wordpress = "WORDPRESS: CUSTOM THEMING | PLUGINS";
     var $design = "DESIGN CORE: ADOBE SUITE";
@@ -59,15 +59,15 @@ var initProgram = setTimeout(function(){
             }
             loadingResume();
             function initName(i){
-               $("#name").addClass("sign cursor").text($name.substring(0, i));
-                  if(i < $name.length){
+               $("#occupation").addClass("sign cursor").text($occupation.substring(0, i));
+                  if(i < $occupation.length){
                      setTimeout(function(){
                         initName(i + 1);   
                      }, 35);
                   }else{
-                     $("#name").removeClass("cursor");
+                     $("#occupation").removeClass("cursor");
                      setTimeout(function() {
-                        initOccupation(0);
+                        initAwards(0);
                      }, 1500);      
                   }
             }
@@ -75,19 +75,19 @@ var initProgram = setTimeout(function(){
                initName(0);
             }, 2500);
          }
-         function initOccupation(i){
-            $("#occupation").addClass("sign cursor").text($occupation.substring(0, i));
-                  if(i < $occupation.length){
-                     setTimeout(function(){
-                        initOccupation(i + 1);   
-                     }, 35);
-                  }else{
-                     $("#occupation").removeClass("cursor");
-                     setTimeout(function() {
-                        initAwards(0);
-                     }, 1500);
-                  }
-         }
+         // function initOccupation(i){
+         //    $("#occupation").addClass("sign cursor").text($occupation.substring(0, i));
+         //          if(i < $occupation.length){
+         //             setTimeout(function(){
+         //                initOccupation(i + 1);   
+         //             }, 35);
+         //          }else{
+         //             $("#occupation").removeClass("cursor");
+         //             setTimeout(function() {
+         //                initAwards(0);
+         //             }, 1500);
+         //          }
+         // }
          function initAwards(i){
             $("#awards").addClass("sign cursor").text($awards.substring(0, i));
                if(i < $awards.length){
@@ -102,7 +102,7 @@ var initProgram = setTimeout(function(){
                }
       }
          function initFrontEnd(i){
-            $('#front-end-span').addClass('fa fa-wrench');
+            $('#front-end-span').addClass('fa fa-apple');
             $('#front-end').addClass("cursor").text($frontEnd.substring(0, i));
                if(i < $frontEnd.length){
                   setTimeout(function(){
@@ -174,89 +174,89 @@ var initProgram = setTimeout(function(){
                       initFrontEndAnimation(i + 1);  
                   }, 35);
                }else{
-                  $('#front-end-animation').removeClass("cursor");
-                  setTimeout(function() {
-                        initCMSDevelopment(0);
-                     }, 1500);
+                  // $('#front-end-animation').removeClass("cursor");
+                  // setTimeout(function() {
+                  //       initCMSDevelopment(0);
+                  //    }, 1500);
                }
          }
-         function initCMSDevelopment(i){
-            $('#cms-span').addClass("fa fa-wordpress")
-            $('#CMS-development').addClass("cursor").text($cmsDevelopment.substring(0, i));
-               if(i < $cmsDevelopment.length){
-                  setTimeout(function(){
-                      initCMSDevelopment(i + 1);  
-                  }, 35);
-               }else{
-                  $('#CMS-development').removeClass("cursor");
-                  setTimeout(function() {
-                        initWordpress(0);
-                     }, 1500);
-               }
-         }
-         function initWordpress(i){
-            $('#wordpress').addClass("sign cursor").text($wordpress.substring(0, i));
-               if(i < $wordpress.length){
-                  setTimeout(function(){
-                      initWordpress(i + 1);  
-                  }, 35);
-               }else{
-                  $('#wordpress').removeClass("cursor");
-                  setTimeout(function() {
-                        initDesign(0);
-                     }, 1500);
-               }
-         }
-          function initDesign(i){
-            $('#design-span').addClass('fa fa-paint-brush');
-            $('#design').addClass("cursor").text($design.substring(0, i));
-               if(i < $design.length){
-                  setTimeout(function(){
-                      initDesign(i + 1);  
-                  }, 35);
-               }else{
-                  $('#design').removeClass("cursor");
-                  setTimeout(function() {
-                        initWebDesign(0);
-                     }, 1500);
-               }
-         }
-         function initWebDesign(i){
-            $('#web-design').addClass("sign cursor").text($webDesign.substring(0, i));
-               if(i < $webDesign.length){
-                  setTimeout(function(){
-                      initWebDesign(i + 1);  
-                  }, 35);
-               }else{
-                  $('#web-design').removeClass("cursor");
-                  setTimeout(function() {
-                        initBranding(0);
-                     }, 1500);
-               }
-         }
-         function initBranding(i){
-            $('#branding').addClass("sign cursor").text($branding.substring(0, i));
-               if(i < $branding.length){
-                  setTimeout(function(){
-                      initBranding(i + 1);  
-                  }, 35);
-               }else{
-                  $('#branding').removeClass("cursor");
-                  setTimeout(function() {
-                        initDesignAnimation(0);
-                     }, 1500);
-               }
-         }
-         function initDesignAnimation(i){
-            $('#design-animation').addClass("sign cursor").text($designAnimation.substring(0, i));
-               if(i < $designAnimation.length){
-                  setTimeout(function(){
-                      initDesignAnimation(i + 1);  
-                  }, 35);
-               }else{
-                  //$('#design-animation').removeClass("cursor");
-               }
-         }
+         // function initCMSDevelopment(i){
+         //    $('#cms-span').addClass("fa fa-wordpress")
+         //    $('#CMS-development').addClass("cursor").text($cmsDevelopment.substring(0, i));
+         //       if(i < $cmsDevelopment.length){
+         //          setTimeout(function(){
+         //              initCMSDevelopment(i + 1);  
+         //          }, 35);
+         //       }else{
+         //          $('#CMS-development').removeClass("cursor");
+         //          setTimeout(function() {
+         //                initWordpress(0);
+         //             }, 1500);
+         //       }
+         // }
+      //    function initWordpress(i){
+      //       $('#wordpress').addClass("sign cursor").text($wordpress.substring(0, i));
+      //          if(i < $wordpress.length){
+      //             setTimeout(function(){
+      //                 initWordpress(i + 1);  
+      //             }, 35);
+      //          }else{
+      //             $('#wordpress').removeClass("cursor");
+      //             setTimeout(function() {
+      //                   initDesign(0);
+      //                }, 1500);
+      //          }
+      //    }
+      //     function initDesign(i){
+      //       $('#design-span').addClass('fa fa-paint-brush');
+      //       $('#design').addClass("cursor").text($design.substring(0, i));
+      //          if(i < $design.length){
+      //             setTimeout(function(){
+      //                 initDesign(i + 1);  
+      //             }, 35);
+      //          }else{
+      //             $('#design').removeClass("cursor");
+      //             setTimeout(function() {
+      //                   initWebDesign(0);
+      //                }, 1500);
+      //          }
+      //    }
+      //    function initWebDesign(i){
+      //       $('#web-design').addClass("sign cursor").text($webDesign.substring(0, i));
+      //          if(i < $webDesign.length){
+      //             setTimeout(function(){
+      //                 initWebDesign(i + 1);  
+      //             }, 35);
+      //          }else{
+      //             $('#web-design').removeClass("cursor");
+      //             setTimeout(function() {
+      //                   initBranding(0);
+      //                }, 1500);
+      //          }
+      //    }
+      //    function initBranding(i){
+      //       $('#branding').addClass("sign cursor").text($branding.substring(0, i));
+      //          if(i < $branding.length){
+      //             setTimeout(function(){
+      //                 initBranding(i + 1);  
+      //             }, 35);
+      //          }else{
+      //             $('#branding').removeClass("cursor");
+      //             setTimeout(function() {
+      //                   initDesignAnimation(0);
+      //                }, 1500);
+      //          }
+      //    }
+      //    function initDesignAnimation(i){
+      //       $('#design-animation').addClass("sign cursor").text($designAnimation.substring(0, i));
+      //          if(i < $designAnimation.length){
+      //             setTimeout(function(){
+      //                 initDesignAnimation(i + 1);  
+      //             }, 35);
+      //          }else{
+      //             //$('#design-animation').removeClass("cursor");
+      //          }
+      //    }
       }
       
    function initProgramAlpha(i){
