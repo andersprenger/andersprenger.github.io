@@ -3,7 +3,7 @@ $(document).ready(function() {
     var loadingInterval = setInterval(function() {
         var dots = initDot.text();
         initDot.text(dots.length >= 5 ? "" : dots + ".");
-    }, 350);
+    }, 350); // Dot Speed
 
     setTimeout(function() {
         clearInterval(loadingInterval);
@@ -32,25 +32,37 @@ $(document).ready(function() {
         var greeting = "ABOUT ANDERSON SPRENGER";
         typeText('#greeting', greeting, 0, function() {
             $('#greeting').removeClass("cursor");
-            executeSequentially(data, 0);
-        });
+            typeTextSequentially(data, 0);
+        }, false); // No "sign cursor" for the greeting
     }
 
-    function executeSequentially(data, index) {
+    function typeTextSequentially(data, index) {
         if (index < data.length) {
             var item = data[index];
+            var addSignCursor = true; // Default to adding "sign cursor"
+            
+            // Avoid adding "sign cursor" for items with FontAwesome icons
+            if (item.classAdd && item.classAdd.classes.includes('fa')) {
+                addSignCursor = false;
+                $(item.classAdd.selector).addClass(item.classAdd.classes);
+            }
+            
             typeText(item.selector, item.text, 0, function() {
                 $(item.selector).removeClass("cursor");
-                executeSequentially(data, index + 1);
-            });
+                typeTextSequentially(data, index + 1);
+            }, addSignCursor);
         }
     }
 
-    function typeText(selector, text, i, callback) {
-        $(selector).addClass("sign cursor").text(text.substring(0, i));
+    function typeText(selector, text, i, callback, addSignCursor = true) {
+        if (addSignCursor) {
+            $(selector).addClass("sign cursor").text(text.substring(0, i));
+        } else {
+            $(selector).text(text.substring(0, i)); // Keep the text update but without adding classes
+        }
         if (i < text.length) {
             setTimeout(function() {
-                typeText(selector, text, i + 1, callback);
+                typeText(selector, text, i + 1, callback, addSignCursor);
             }, 35);
         } else {
             if (callback) callback();
