@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Share+Tech);
+@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono);
 /* Removido $shareTech: "Share Tech"; pois será substituído diretamente */
 
 body{
@@ -6,23 +6,23 @@ body{
 }
 
 h1{
-   font-family: 'Share Tech', sans-serif; /* $shareTech substituído */
+   font-family: "JetBrains Mono", monospace; /* $shareTech substituído */
    /* animation: pulse .9s infinite; */
-   color: #00ebd4; /* $blue substituído */
+   color: #33FF00; /* $blue substituído */
 }
 
 #identity-results, #resume, #loading-alpha-div, #loadingH1, #loadingMessage2, #message{
    margin-top: 20px;
-   font-family: 'Share Tech', sans-serif; /* $shareTech substituído */
+   font-family: "JetBrains Mono", monospace; /* $shareTech substituído */
    font-weight: 900;
    font-size: 24px;
-   color: #00ebd4; /* $blue substituído */
+   color: #33FF00; /* $blue substituído */
    /* animation: pulse .9s infinite; */
 }
 
 i{
    font-size: 24px;
-   color: #00ebd4; /* $blue substituído */
+   color: #33FF00; /* $blue substituído */
    /* animation: pulse .9s infinite;   */
 }
 
